@@ -1,5 +1,11 @@
 # Demonstrate how to use list comprehensions
-
+import os
+def clearConsole():
+    command = 'clear'
+    if os.name in ('nt', 'dos'):  # If Machine is running on Windows, use cls
+        command = 'cls'
+    os.system(command)
+clearConsole()
 
 def main():
     # define two lists of numbers

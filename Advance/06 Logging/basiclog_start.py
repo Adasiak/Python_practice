@@ -1,10 +1,17 @@
 # demonstrate the logging api in Python
-
+import os
+def clearConsole():
+    command = 'clear'
+    if os.name in ('nt', 'dos'):  # If Machine is running on Windows, use cls
+        command = 'cls'
+    os.system(command)
+clearConsole()
 # TODO: use the built-in logging module
-
+import logging
 def main():
     # TODO: Use basicConfig to configure logging
-
+    logging.basicConfig(level=logging.DEBUG, filename="output.log",
+                                filemode="w")
     # Try out each of the log levels
     logging.debug("This is a debug message")
     logging.info("This is a info message")
@@ -13,6 +20,7 @@ def main():
     logging.critical("This is a critical message")
 
     # TODO: Output formatted strings to the log
+    logging.info("Here is the {} log levels and an int:".format("string",10))
 
 
 if __name__ == "__main__":
