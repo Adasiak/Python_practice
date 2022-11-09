@@ -15,7 +15,7 @@ def left_click(x, y, clicks=1):
 while True:
     left_click(400, 400)
     # left_click(2600, 400) #left clicks at 200, 200 on your screen. Was able to send 10k clicks instantly.
-    sleep(15) 
+    sleep(30) 
     left_click(500, 400)
     # left_click(2600, 500)
-    sleep(15)
+    sleep(30)
